@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  <link rel="stylesheet" href="./scss/styles.css">
+  <title>Wine Tasting</title>
+</head>
+<body>
+ <header class="header">
+
+   <!-- top bar: hidden for mobile -->
+   <div class="topBar flex">
+     <a href="#">
+       <img class="socials" src="img/facebook.svg" alt="facebook logo icon"/>
+     </a>
+     <a href="#">
+      <img class="socials" src="img/twitter.svg" alt="twitter logo icon"/>
+    </a>
+     <a href="#">English</a>
+     <a href="#">My Page</a>
+     <a href="#">Logout</a>
+   </div>
+
+   <!-- nav bar: hidden for mobile -->
+   <nav class="flex flex-jc-spb flex-ai-c">
+     <a href="index.html" class="logo">
+       <img src="img/logoWTA.png" 
+       alt="Red wine glass as logo for Wine Tasting Association">
+     </a>
+     <ul class="navlinks flex">
+       <li><a href="index.html">Home</a></li>
+       <li><a href="about.html">About</a></li>
+     </ul>
+   </nav>
+
+   <button type="button" class="menuBtn">
+     <i class="material-icons">menu</i>
+   </button> 
+    
+  <div class="mobile-menu mobile-menu-closed">
+    <button type="button" class="menuBtn">
+      <i class="material-icons">close</i>
+    </button>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+  </div>  
+ </header>
+
+ <main>
+  <section class="main__info">a</section>
+  <section class="main__program">b</section>
+  <section class="main__speakers">c</section>
+ </main>
+
+ <footer>
+<div class="sponsors"></div>
+<div class="copyrights"></div>
+ </footer>
+  <script src="js/menu.js"></script>
+</body>
+</html>

@@ -1,3 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@use "sass:math";
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+* ul li {
+  list-style: none;
+}
+
+* a, a:visited, a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-jc-c, .header .mobile-menu {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-jc-start {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.flex-jc-end, .header .topBar {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.flex-jc-spb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-jc-spa {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.flex-ai-c, .header .mobile-menu {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-ai-start {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.flex-ai-end {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.flex-ai-spb {
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+}
+
+.flex-ai-spa {
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 5;
+}
+
+.header .topBar {
+  display: none;
+  background-color: #3e3e3e;
+  color: #fff;
+  padding-left: 14%;
+  padding-right: 14%;
+  padding-top: 0.3625rem;
+  padding-bottom: 0.3625rem;
+  gap: 1.25rem;
+  font-size: 0.75rem;
+}
+
+@media (min-width: 48rem) {
+  .header .topBar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.header .topBar .socials {
+  height: 1rem;
+  color: #fff;
+}
+
+.header nav {
+  display: none;
+  padding-left: 14%;
+  padding-right: 14%;
+  -webkit-box-shadow: 0 0.25rem 32px 8px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0.25rem 32px 8px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 48rem) {
+  .header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.header nav .logo img {
+  height: 2.5rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.header nav .navlinks > li {
+  color: #bababa;
+}
+
+.header nav .navlinks > li:not(:first-child) {
+  margin-left: 3.25rem;
+}
+
+.header nav .navlinks > li:hover {
+  color: #ec5242;
+}
+
+.header .menuBtn {
+  display: block;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: transparent;
+  border-width: 0;
+  border-color: none;
+  border-radius: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 1.625rem;
+  left: 1.625rem;
+}
+
+@media (min-width: 48rem) {
+  .header .menuBtn {
+    display: none;
+  }
+}
+
+.header .menuBtn i {
+  font-size: 2.75rem;
+  color: #3e3e3e;
+}
+
+.header .mobile-menu {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  background-color: #790000;
+  color: #bababa;
+  font-size: 2rem;
+}
+
+.header .mobile-menu-closed {
+  left: -105vw;
+}
+
+.header .mobile-menu-opened {
+  left: 0;
+}
+
+.header .mobile-menu-opened i {
+  font-size: 2.75rem;
+  color: #bababa;
+}
+
+main {
+  background-image: url("../img/degustazioneInVigna.png");
+  background-repeat: repeat-x;
+  background-position-x: center;
+  background-blend-mode: overlay;
+  background-color: #f5f5f5;
+  position: relative;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  height: 400px;
+}
+
+@media (min-width: 48rem) {
+  main {
+    top: 5.725rem;
+  }
+}
+
 @font-face {
   font-family: "COCOGOOSE";
   src: url("../webfonts_COCOGOOSE/COCOGOOSE.ttf.woff") format("woff"), url("../webfonts_COCOGOOSE/COCOGOOSE.ttf.svg#COCOGOOSE") format("svg"), url("../webfonts_COCOGOOSE/COCOGOOSE.ttf.eot"), url("../webfonts_COCOGOOSE/COCOGOOSE.ttf.eot?#iefix") format("embedded-opentype");
