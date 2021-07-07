@@ -1,0 +1,74 @@
+.main {
+  background-image: url($mainBgImgUrl);
+  background-repeat: repeat-x;
+  background-position-x: center;
+  background-blend-mode: overlay;
+  background-color: $almostWhite;
+  position: relative;
+  color: $darkGrey;  
+  font-size: $regular;
+    
+  @include px($lrSpacing-mobile); 
+
+  @include wider-than($mainBp){
+    top: $mainFromTop; //calculated TopBar + Navbar
+    @include px($lrSpacing-desktop);
+  }
+  
+  &__info {
+    @include py(8.375rem);
+
+    h1 {
+      color: $orange;
+      font-size: $large;
+      @include wider-than($mainBp) {
+        font-size: $xlarge;
+      }
+    }
+
+    h2 {
+      background-image: url($textBgImgUrl);
+      background-position: bottom center;
+      background-size: contain;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      font-size: $big;
+      font-family: 'COCOGOOSE-LETTERPRESS';
+      span {
+        font-family: 'COCOGOOSE';
+      }
+
+      @include wider-than($mainBp) {
+        font-size: $xbig;
+      }
+    }
+
+    .description {
+      line-height: 1.5rem;
+      border: 3px solid $white;
+      margin-top: $medium;
+      @include px (1.5rem);
+      @include py (1.5rem);
+
+      @include wider-than($mainBp) {
+        max-width: 65%;
+        margin-top: $small;
+        @include px ($medium);
+        @include py ($medium);
+      }
+    }
+  }
+
+  .date {
+    font-size: $xlarge;
+    font-family: 'COCOGOOSE';
+    @include py ($small);
+  }
+
+  .location {
+    font-size: $regular;
+  }
+    
+}

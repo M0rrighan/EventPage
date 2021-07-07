@@ -1,10 +1,11 @@
-const menuBtnOpen = document.getElementById('openMenuBtn');
-const menuBtnClose = document.getElementById('closeMenuBtn');
+const menuBtnOpen = document.querySelector('.openMenuBtn');
+const menuBtnClose = document.querySelector('.closeMenuBtn');
 const menu = document.querySelector('.mobile-menu');
 const navlinks = document.querySelectorAll('.navlinks a');
 
 for (let i = 0; i < navlinks.length; i += 1) {
-  menu.appendChild(navlinks[i]);
+  const clone = navlinks[i].cloneNode(true);
+  menu.appendChild(clone);
 }
 
 menuBtnOpen.addEventListener('click', () => {

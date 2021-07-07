@@ -41,7 +41,7 @@
     }
 
     .navlinks{
-      > li {
+      > a {
         &:not(:first-child){
           margin-left: 3.25rem;
         }

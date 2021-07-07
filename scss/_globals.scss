@@ -29,6 +29,11 @@ list-style: none;
   color: inherit;
 }
 
+//Helper classes
+.upper {
+  text-transform: uppercase;
+}
+
 //Flexbox helper classes
 .flex {
   display: flex;
@@ -37,9 +42,9 @@ list-style: none;
     justify-content: center;
   }
 
-  &-jc-start {
-    justify-content: flex-start;
-  }
+  // &-jc-start {
+  //   justify-content: flex-start;
+  // }
 
   &-jc-end {
     justify-content: flex-end;
@@ -49,28 +54,28 @@ list-style: none;
     justify-content: space-between;
   }
 
-  &-jc-spa {
-    justify-content: space-around;
-  }
+  // &-jc-spa {
+  //   justify-content: space-around;
+  // }
 
   &-ai-c {
     align-items: center;
   }
 
-  &-ai-start {
-    align-items: flex-start;
-  }
+  // &-ai-start {
+  //   align-items: flex-start;
+  // }
 
-  &-ai-end {
-    align-items: flex-end;
-  }
+  // &-ai-end {
+  //   align-items: flex-end;
+  // }
 
-  &-ai-spb {
-    align-items: space-between;
-  }
+  // &-ai-spb {
+  //   align-items: space-between;
+  // }
 
-  &-ai-spa {
-    align-items: space-around;
-  }
+  // &-ai-spa {
+  //   align-items: space-around;
+  // }
 }
 

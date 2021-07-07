@@ -15,13 +15,14 @@
   font-weight: normal;
   font-style: normal;
 }
-// @font-face {
-//   font-family: 'COCOGOOSE-LETTERPRESS';
-//   src:url('../webfonts_COCOGOOSE-LETTERPRESS/COCOGOOSE-LETTERPRESS.ttf.woff') format('woff'),
-//       url('../webfonts_COCOGOOSE-LETTERPRESS/COCOGOOSE-LETTERPRESS.ttf.svg#COCOGOOSE-LETTERPRESS') format('svg'),
-//       url('../webfonts_COCOGOOSE-LETTERPRESS/COCOGOOSE-LETTERPRESS.ttf.eot'),
-//       url('../webfonts_COCOGOOSE-LETTERPRESS/COCOGOOSE-LETTERPRESS.ttf.eot?#iefix') format('embedded-opentype'); 
-//   font-weight: normal;
-//   font-style: normal;
-// }
+
+@font-face {
+  font-family: 'COCOGOOSE-LETTERPRESS';
+  src:url('../webfonts_COCOGOOSE-LETTERPRESS/COCOGOOSE-LETTERPRESS.ttf.woff') format('woff'),
+      url('../webfonts_COCOGOOSE-LETTERPRESS/COCOGOOSE-LETTERPRESS.ttf.svg#COCOGOOSE-LETTERPRESS') format('svg'),
+      url('../webfonts_COCOGOOSE-LETTERPRESS/COCOGOOSE-LETTERPRESS.ttf.eot'),
+      url('../webfonts_COCOGOOSE-LETTERPRESS/COCOGOOSE-LETTERPRESS.ttf.eot?#iefix') format('embedded-opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
 
