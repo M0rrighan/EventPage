@@ -164,8 +164,7 @@ body {
   color: #ec5242;
 }
 
-.header .menuBtn {
-  display: block;
+.header .menuBtn, .header .openMenuBtn, .header .closeMenuBtn {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
@@ -176,23 +175,31 @@ body {
   border-radius: 0;
   cursor: pointer;
   position: absolute;
-  top: 1.625rem;
-  left: 1.625rem;
 }
 
 @media (min-width: 48rem) {
-  .header .menuBtn {
+  .header .menuBtn, .header .openMenuBtn, .header .closeMenuBtn {
     display: none;
   }
 }
 
-.header .menuBtn i {
+.header .menuBtn i, .header .openMenuBtn i, .header .closeMenuBtn i {
   font-size: 2.75rem;
   color: #3e3e3e;
 }
 
+.header .openMenuBtn {
+  top: 1.625rem;
+  left: 1.625rem;
+}
+
+.header .closeMenuBtn {
+  top: 1.625rem;
+  right: 1.625rem;
+}
+
 .header .mobile-menu {
-  position: fixed;
+  position: absolute;
   top: 0;
   height: 100vh;
   width: 100vw;

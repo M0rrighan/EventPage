@@ -54,14 +54,11 @@
   }
 
   .menuBtn {
-    display: block;
     @include wider-than($mainBp){
       display: none;
     }
     @include button (0, 0, transparent, 0, none, 0);
     position: absolute;
-    top: $menuTopLeftSpace;
-    left: $menuTopLeftSpace;
 
     i {
       font-size: $big;
@@ -69,8 +66,20 @@
     }
   }
 
+  .openMenuBtn {
+    @extend .menuBtn;
+    top: $menuTopLeftSpace;
+    left: $menuTopLeftSpace;
+  }
+
+  .closeMenuBtn {
+    @extend .menuBtn;
+    top: $menuTopLeftSpace;
+    right: $menuTopLeftSpace;
+  }
+
   .mobile-menu {    
-    position: fixed;
+    position: absolute;
     top: 0;
     height: 100vh;
     width: 100vw;
