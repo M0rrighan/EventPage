@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+* ul li {
+list-style: none;
+}
+
+* a, a:visited, a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+//Flexbox helper classes
+.flex {
+  display: flex;
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-jc-start {
+    justify-content: flex-start;
+  }
+
+  &-jc-end {
+    justify-content: flex-end;
+  }
+
+  &-jc-spb {
+    justify-content: space-between;
+  }
+
+  &-jc-spa {
+    justify-content: space-around;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+
+  &-ai-start {
+    align-items: flex-start;
+  }
+
+  &-ai-end {
+    align-items: flex-end;
+  }
+
+  &-ai-spb {
+    align-items: space-between;
+  }
+
+  &-ai-spa {
+    align-items: space-around;
+  }
+}
+
