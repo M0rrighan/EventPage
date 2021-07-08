@@ -19,17 +19,26 @@
 }
 
 @mixin wider-than($bpSize) {
-  @media (min-width: $bpSize){
+  @media (min-width: $bpSize) {
     @content;
   }
 }
 
+@mixin wide-less-than($bpSize) {
+  @media (max-width: $bpSize) {
+    @content;
+  }
+}
+
+
 // button attributes: 
-//padding-x, padding-y, background-color, 
+//padding-x, padding-y, font-size, color, background-color, 
 //border-width, border-color, border-radius
-@mixin button ($px, $py, $bgCol, $bdWidth, $bdCol, $bdRad) {
+@mixin button ($px, $py, $fs, $fcol, $bgCol, $bdWidth, $bdCol, $bdRad) {
   @include px($px);
   @include py($py);
+  font-size: $fs;
+  color: $fcol;
   background-color: $bgCol;
   border-width: $bdWidth;
   border-color: $bdCol;

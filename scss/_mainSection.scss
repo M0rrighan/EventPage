@@ -5,20 +5,27 @@
   background-blend-mode: overlay;
   background-color: $almostWhite;
   position: relative;
-  color: $darkGrey;  
-  font-size: $regular;
-    
-  @include px($lrSpacing-mobile); 
+  color: $darkGrey;
 
   @include wider-than($mainBp){
     top: $mainFromTop; //calculated TopBar + Navbar
-    @include px($lrSpacing-desktop);
+  }
+
+  .separator {
+      background-color: $orange;
+      width: 3rem;
+      height: 0.125rem;
+      @include my($regular);
   }
   
   &__info {
     @include py(8.375rem);
+    @include px($lrSpacing-mobile);
+    @include wider-than($mainBp){
+      @include px($lrSpacing-desktop);
+    }
 
-    h1 {
+    h2 {
       color: $orange;
       font-size: $large;
       @include wider-than($mainBp) {
@@ -26,7 +33,7 @@
       }
     }
 
-    h2 {
+    h1 {
       background-image: url($textBgImgUrl);
       background-position: bottom center;
       background-size: contain;
@@ -45,7 +52,8 @@
       }
     }
 
-    .description {
+    .description {        
+      font-size: $regular;
       line-height: 1.5rem;
       border: 3px solid $white;
       margin-top: $medium;
@@ -59,16 +67,110 @@
         @include py ($medium);
       }
     }
+
+    .date {
+      font-size: $xlarge;
+      font-family: 'COCOGOOSE';
+      @include py ($small);
+    }
+  
+    .location {
+      font-size: $regular;
+    }
   }
 
-  .date {
-    font-size: $xlarge;
-    font-family: 'COCOGOOSE';
-    @include py ($small);
-  }
+  &__program {
+    background-image: url($programBgImgUrl);
+    @include px($lrSpacing-mobile);
+    @include wider-than($mainBp){
+      @include px($lrSpacing-desktop);
+    }   
+    @extend .flex;
+    flex-direction: column;
+    @extend .flex-ai-c;
+    padding-bottom: $medium ;
 
-  .location {
-    font-size: $regular;
+    h2 {
+      color: $white;
+      font-size: $large;
+      padding-top: $xbig;
+    }
+
+    ul.programContent {
+      @include my($medium);
+      @extend .flex;
+      flex-basis: 100%;
+      flex-wrap: wrap;
+      gap: $regular;
+      @include wider-than($mainBp) {
+        flex-wrap: nowrap;
+        gap: 0.175rem;
+      }
+
+      li.programItemCard {
+        background-color: #ffffff10;
+        border: 2px solid transparent;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 17% 23% 60%;
+        &:hover {
+          border-color: $white
+        }
+        @include wider-than($mainBp) {
+          grid-template-columns: 100%;
+          grid-template-rows: 27% 5% 66%;
+          @include px(0.625rem);
+        }
+
+        .programCardIcon, 
+        .programCardTitle {
+          @include my(auto);
+          @include mx(auto);
+        }
+
+        .programCardIcon {
+          i {
+            color: $white;
+            background-color: transparent;
+            font-size: $xbig;
+          }
+        }
+
+        .programCardTitle {
+          color: $orange;
+          font-size: $medium;
+          font-weight: bold;
+          @include wider-than($mainBp) {
+            font-size: 0.875rem;
+          }
+        }
+
+        .programCardDescription {
+          color: $almostWhite;
+          font-size: $regular;
+          line-height: 1.5rem;
+          padding-right: $small;
+          @include my($regular);
+          @include mx(auto);
+          @include wider-than($mainBp) {
+            font-size: $small;
+            @include px(0);
+          }
+        }
+      }
+    }
+
+    button.contact {
+      @include my($large);
+      @include button (4rem, $large, $medium, $white, $orange, 0, unset, 0);
+    }
+
+    a {
+      @include my($large);
+      font-size: $regular;
+      color: $almostWhite;
+      text-decoration: underline;
+    }
   }
     
 }

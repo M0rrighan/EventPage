@@ -4,10 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
   <link rel="stylesheet" href="./scss/styles.css">
   <title>Wine Tasting</title>
 </head>
@@ -39,9 +36,9 @@
      </div>
    </nav>
 
-   <button type="button" class="openMenuBtn">
+   <a class="openMenuBtn">
      <i class="material-icons">menu</i>
-   </button> 
+   </a> 
   
   <!-- mobile menu, hidden for desktop -->
   <div class="mobile-menu mobile-menu-closed">
@@ -53,8 +50,8 @@
 
  <main class="main">
   <section class="main__info">
-    <h1 class="greetings">"Hello! Wine lovers"</h1>
-    <h2 class="upper">wine tasting <br> in the vineyard <br> <span>2021</span></h2>
+    <h2 class="greetings">"Hello! Wine lovers"</h2>
+    <h1 class="upper">wine tasting <br> in the vineyard <br> <span>2021</span></h1>
     <div class="description">A different way to approach wine and to discover lands,
        scents and stories of winemakers. An excellent opportunity to taste local 
        delicacies selected to match the various wines.
@@ -67,7 +64,82 @@
     </div>
   
   </section>
-  <section class="main__program">b</section>
+  <section class="main__program">
+    <h2>Main Program</h2>
+    <p class="separator"></p>
+    <ul class="programContent">
+      <li class="programItemCard">
+        <div class="programCardIcon">
+          <i class="material-icons-outlined">
+            brunch_dining
+          </i>
+        </div>
+        <div class="programCardTitle">
+            Welcoming
+        </div>
+        <div class="programCardDescription">
+          Welcoming drinks open bar: selected fizzy Aperi - wines accompanied
+          by a wide selection of locally produced gourmet appetizers
+        </div>
+      </li>
+
+      <li class="programItemCard">
+        <div class="programCardIcon">
+          <i class="material-icons-outlined">record_voice_over</i>
+        </div>
+        <div class="programCardTitle">
+          Lecture
+        </div>
+        <div class="programCardDescription">
+          Esteemed oenologists explaining the various properties of wine, guiding 
+          in the choice of the right wine glass and food to match and a lot more...
+        </div>
+      </li>
+
+      <li class="programItemCard">
+        <div class="programCardIcon">
+          <i class="material-icons-outlined">dinner_dining</i>
+        </div>
+        <div class="programCardTitle">
+          Dinner
+        </div>
+        <div class="programCardDescription">
+          Seasonal delicacies produced locally: - entree' of cured meats and cheeses,
+          - first course (pasta), and - main course of choice.
+        </div>
+      </li>
+
+      <li class="programItemCard">
+        <div class="programCardIcon">
+          <i class="material-icons-outlined">music_note</i>
+        </div>
+        <div class="programCardTitle">
+          Live Music
+        </div>
+        <div class="programCardDescription">
+          Live band entertaining with soft jazz. A perfect match to make your experience 
+          even more sensational.
+        </div>
+      </li>
+
+      <li class="programItemCard">
+        <div class="programCardIcon">
+          <i class="material-icons-outlined">cake</i>
+        </div>
+        <div class="programCardTitle">
+          Dessert
+        </div>
+        <div class="programCardDescription">
+          To end the evening on a sweet note: Tastes of delicious light 
+          pastries along with carefully selected dessert wines.
+        </div>
+      </li>
+    </ul>
+    <button type="button" class="contact desktop-invisible">
+      Book your spot
+    </button>
+    <a href="#" class="upper mobile-invisible">See the whole program</a>
+  </section>
   <section class="main__speakers">c</section>
  </main>
 

@@ -57,7 +57,7 @@
     @include wider-than($mainBp){
       display: none;
     }
-    @include button (0, 0, transparent, 0, none, 0);
+    @include button (0, 0,  $big, inherit, transparent, 0, unset, 0.25rem);
     position: absolute;
 
     i {
