@@ -17,6 +17,13 @@
       height: 0.125rem;
       @include my($regular);
   }
+
+  .separatorSmall {
+    background-color: $lightGrey;
+    width: $medium;
+    height: 0.125rem;
+    @include my($small);
+}
   
   &__info {
     @include py(8.375rem);
@@ -90,13 +97,13 @@
     @extend .flex-ai-c;
     padding-bottom: $medium ;
 
-    h2 {
+    .sectionTitle {
       color: $white;
       font-size: $large;
       padding-top: $xbig;
     }
 
-    ul.programContent {
+    .programContent {
       @include my($medium);
       @extend .flex;
       flex-basis: 100%;
@@ -107,7 +114,7 @@
         gap: 0.175rem;
       }
 
-      li.programItemCard {
+      .programItemCard {
         background-color: #ffffff10;
         border: 2px solid transparent;
         width: 100%;
@@ -172,5 +179,110 @@
       text-decoration: underline;
     }
   }
-    
+
+  &__speakers {
+    background-color: $almostWhite;
+    @include px($lrSpacing-mobile);
+    @include wider-than($mainBp){
+      @include px($lrSpacing-desktop);
+    }   
+    @extend .flex;
+    flex-direction: column;
+    @extend .flex-ai-c;
+    padding-bottom: $medium ;
+
+    h2 {
+      font-size: $large;
+      padding-top: $xbig;
+      color: $darkGrey;
+    }
+
+    .speakersContent{
+      @include my($medium);
+      @extend .flex;
+      flex-basis: 100%;
+      flex-wrap: wrap;
+      gap: $large;
+      @include wider-than($mainBp) {
+        flex-basis: 50%;
+        flex-wrap: nowrap;
+        gap: $small;
+      }
+
+      .speakerCard {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 34% 66%;
+        @include wider-than($mainBp) {
+          grid-template-columns: 36.2% 63.8%;
+          grid-template-rows: auto;
+        }
+
+        .speakerPicture{
+          position: relative;
+          padding: 10% 0;
+          @extend .flex;
+          @extend .flex-jc-c;          
+          .pictureHolder {
+            z-index: 1;
+            position: relative;
+            width: 80%;
+            .picture {
+              width: 100%;
+              height: auto;
+            }
+            &::before {
+              background-image: url($bigoreSpeakerPicture);
+              @include wider-than($mainBp){
+                opacity: 50%;
+              } 
+              background-position: top left;
+              background-size: contain;
+              content: '';
+              width: 50%;
+              height: 50%;
+              position: absolute;
+              top: -12.5%;
+              left: -12.5%;
+              z-index: -1;
+            }
+          }
+        }
+
+        .speakerData {
+          @include px(0.25rem);
+
+          .speakerName {
+            font-size: $medium;
+            letter-spacing: -0.0625em;
+            padding-bottom: 0.25rem;
+            color: $darkGrey;
+            font-weight: bold;
+          }
+          .speakerRole {
+            font-size: $regular;
+            font-style: italic;
+            color: $orange;
+          }
+          .speakerInfo {
+            font-size: $small;
+            color: $darkGrey;
+          }
+        }
+      }
+    }
+    .expand {
+      @extend .flex;
+      @extend .flex-jc-c;
+      @extend .flex-ai-c;
+      width: 100%;
+      @include my($large);
+      @include button (unset, $medium, $regular, $darkGrey, transparent, 1px, $lightGrey, 0.25rem);
+      border-style: solid;
+      i {
+        color: $orange;
+        font-weight: bold;
+      }
+    }  
+  }    
 }

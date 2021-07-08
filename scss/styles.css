@@ -47,13 +47,13 @@ body {
   }
 }
 
-.flex, .main__program, .main__program ul.programContent {
+.flex, .main__program, .main__program .programContent, .main__speakers, .main__speakers .speakersContent, .main__speakers .speakersContent .speakerCard .speakerPicture, .main__speakers .expand {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.flex-jc-c, .header .mobile-menu {
+.flex-jc-c, .header .mobile-menu, .main__speakers .speakersContent .speakerCard .speakerPicture, .main__speakers .expand {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -71,7 +71,7 @@ body {
           justify-content: space-between;
 }
 
-.flex-ai-c, .header .mobile-menu, .main__program {
+.flex-ai-c, .header .mobile-menu, .main__program, .main__speakers, .main__speakers .expand {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -236,6 +236,14 @@ body {
   margin-bottom: 1rem;
 }
 
+.main .separatorSmall {
+  background-color: #bababa;
+  width: 1.375rem;
+  height: 0.125rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
 .main__info {
   padding-top: 8.375rem;
   padding-bottom: 8.375rem;
@@ -334,13 +342,13 @@ body {
   }
 }
 
-.main__program h2 {
+.main__program .sectionTitle {
   color: #fff;
   font-size: 2rem;
   padding-top: 3rem;
 }
 
-.main__program ul.programContent {
+.main__program .programContent {
   margin-top: 1.375rem;
   margin-bottom: 1.375rem;
   -ms-flex-preferred-size: 100%;
@@ -351,14 +359,14 @@ body {
 }
 
 @media (min-width: 48rem) {
-  .main__program ul.programContent {
+  .main__program .programContent {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     gap: 0.175rem;
   }
 }
 
-.main__program ul.programContent li.programItemCard {
+.main__program .programContent .programItemCard {
   background-color: #ffffff10;
   border: 2px solid transparent;
   width: 100%;
@@ -368,12 +376,12 @@ body {
       grid-template-columns: 17% 23% 60%;
 }
 
-.main__program ul.programContent li.programItemCard:hover {
+.main__program .programContent .programItemCard:hover {
   border-color: #fff;
 }
 
 @media (min-width: 48rem) {
-  .main__program ul.programContent li.programItemCard {
+  .main__program .programContent .programItemCard {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
     -ms-grid-rows: 27% 5% 66%;
@@ -383,33 +391,33 @@ body {
   }
 }
 
-.main__program ul.programContent li.programItemCard .programCardIcon,
-.main__program ul.programContent li.programItemCard .programCardTitle {
+.main__program .programContent .programItemCard .programCardIcon,
+.main__program .programContent .programItemCard .programCardTitle {
   margin-top: auto;
   margin-bottom: auto;
   margin-left: auto;
   margin-right: auto;
 }
 
-.main__program ul.programContent li.programItemCard .programCardIcon i {
+.main__program .programContent .programItemCard .programCardIcon i {
   color: #fff;
   background-color: transparent;
   font-size: 3rem;
 }
 
-.main__program ul.programContent li.programItemCard .programCardTitle {
+.main__program .programContent .programItemCard .programCardTitle {
   color: #ec5242;
   font-size: 1.375rem;
   font-weight: bold;
 }
 
 @media (min-width: 48rem) {
-  .main__program ul.programContent li.programItemCard .programCardTitle {
+  .main__program .programContent .programItemCard .programCardTitle {
     font-size: 0.875rem;
   }
 }
 
-.main__program ul.programContent li.programItemCard .programCardDescription {
+.main__program .programContent .programItemCard .programCardDescription {
   color: #f5f5f5;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -421,7 +429,7 @@ body {
 }
 
 @media (min-width: 48rem) {
-  .main__program ul.programContent li.programItemCard .programCardDescription {
+  .main__program .programContent .programItemCard .programCardDescription {
     font-size: 0.75rem;
     padding-left: 0;
     padding-right: 0;
@@ -450,6 +458,149 @@ body {
   font-size: 1rem;
   color: #f5f5f5;
   text-decoration: underline;
+}
+
+.main__speakers {
+  background-color: #f5f5f5;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 1.375rem;
+}
+
+@media (min-width: 48rem) {
+  .main__speakers {
+    padding-left: 14%;
+    padding-right: 14%;
+  }
+}
+
+.main__speakers h2 {
+  font-size: 2rem;
+  padding-top: 3rem;
+  color: #3e3e3e;
+}
+
+.main__speakers .speakersContent {
+  margin-top: 1.375rem;
+  margin-bottom: 1.375rem;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+}
+
+@media (min-width: 48rem) {
+  .main__speakers .speakersContent {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    gap: 0.75rem;
+  }
+}
+
+.main__speakers .speakersContent .speakerCard {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 34% 66%;
+      grid-template-columns: 34% 66%;
+}
+
+@media (min-width: 48rem) {
+  .main__speakers .speakersContent .speakerCard {
+    -ms-grid-columns: 36.2% 63.8%;
+        grid-template-columns: 36.2% 63.8%;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+  }
+}
+
+.main__speakers .speakersContent .speakerCard .speakerPicture {
+  position: relative;
+  padding: 10% 0;
+}
+
+.main__speakers .speakersContent .speakerCard .speakerPicture .pictureHolder {
+  z-index: 1;
+  position: relative;
+  width: 80%;
+}
+
+.main__speakers .speakersContent .speakerCard .speakerPicture .pictureHolder .picture {
+  width: 100%;
+  height: auto;
+}
+
+.main__speakers .speakersContent .speakerCard .speakerPicture .pictureHolder::before {
+  background-image: url("../img/quadrati.jpg");
+  background-position: top left;
+  background-size: contain;
+  content: '';
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: -12.5%;
+  left: -12.5%;
+  z-index: -1;
+}
+
+@media (min-width: 48rem) {
+  .main__speakers .speakersContent .speakerCard .speakerPicture .pictureHolder::before {
+    opacity: 50%;
+  }
+}
+
+.main__speakers .speakersContent .speakerCard .speakerData {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.main__speakers .speakersContent .speakerCard .speakerData .speakerName {
+  font-size: 1.375rem;
+  letter-spacing: -0.0625em;
+  padding-bottom: 0.25rem;
+  color: #3e3e3e;
+  font-weight: bold;
+}
+
+.main__speakers .speakersContent .speakerCard .speakerData .speakerRole {
+  font-size: 1rem;
+  font-style: italic;
+  color: #ec5242;
+}
+
+.main__speakers .speakersContent .speakerCard .speakerData .speakerInfo {
+  font-size: 0.75rem;
+  color: #3e3e3e;
+}
+
+.main__speakers .expand {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-left: unset;
+  padding-right: unset;
+  padding-top: 1.375rem;
+  padding-bottom: 1.375rem;
+  font-size: 1rem;
+  color: #3e3e3e;
+  background-color: transparent;
+  border-width: 1px;
+  border-color: #bababa;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  border-style: solid;
+}
+
+.main__speakers .expand i {
+  color: #ec5242;
+  font-weight: bold;
 }
 
 @font-face {
