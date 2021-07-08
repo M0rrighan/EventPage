@@ -33,13 +33,17 @@
     @include px($lrSpacing-desktop);
     box-shadow: 0 0.25rem 32px 8px rgba(0, 0, 0, 0.3);
 
-    .logo {
-      img {
-        height: $logoImgH; //40px
-        @include my($navBarSpacingTb); //12px
+    .logoPlace {
+      position: relative;
+      height: $logoImgH; //40px
+      @include my($navBarSpacingTb); //12px
+      .eventLogo {
+        content: url($eventLogo);
+        height: 100%;       
       }    
-    }
 
+    }
+    
     .navlinks{
       > a {
         &:not(:first-child){

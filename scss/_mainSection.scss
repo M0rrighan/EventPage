@@ -10,20 +10,6 @@
   @include wider-than($mainBp){
     top: $mainFromTop; //calculated TopBar + Navbar
   }
-
-  .separator {
-      background-color: $orange;
-      width: 3rem;
-      height: 0.125rem;
-      @include my($regular);
-  }
-
-  .separatorSmall {
-    background-color: $lightGrey;
-    width: $medium;
-    height: 0.125rem;
-    @include my($small);
-}
   
   &__info {
     @include py(8.375rem);
@@ -204,9 +190,10 @@
       flex-wrap: wrap;
       gap: $large;
       @include wider-than($mainBp) {
-        flex-basis: 50%;
-        flex-wrap: nowrap;
-        gap: $small;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr;
+        row-gap: $medium;
       }
 
       .speakerCard {
@@ -271,10 +258,14 @@
         }
       }
     }
+
     .expand {
       @extend .flex;
       @extend .flex-jc-c;
       @extend .flex-ai-c;
+      @include wider-than($mainBp){
+       display: none;
+      }
       width: 100%;
       @include my($large);
       @include button (unset, $medium, $regular, $darkGrey, transparent, 1px, $lightGrey, 0.25rem);

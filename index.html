@@ -26,10 +26,13 @@
 
    <!-- nav bar: hidden for mobile -->
    <nav class="flex flex-jc-spb flex-ai-c">
-     <a href="index.html" class="logo">
-       <img src="img/logoWTA.png" 
-       alt="Red wine glass as logo for Wine Tasting Association">
-     </a>
+     <div class="logoPlace">
+       <a href="index.html">
+        <img src="/img/logoEvent.png" class="eventLogo" 
+            alt="Red wine glass as logo for Wine Tasting Association">
+        </a>
+    </div>
+     
      <div class="navlinks flex">
        <a href="index.html">Home</a>
        <a href="about.html">About</a>
@@ -183,8 +186,49 @@
           </div>
         </div>
       </li>
+
+      <li class="speakerCard">
+        <div class="speakerPicture">
+          <div class="pictureHolder">
+            <img 
+            class="picture"
+            src="/img/enologo1.jpg" 
+            alt="Picture of: Pinco Pallino - enologo">
+          </div>          
+        </div>
+        <div class="speakerData">
+          <div class="speakerName">Yochai Benkler</div>
+          <div class="speakerRole">Enologo esperto</div>
+          <p class="separatorSmall"></p>
+          <div class="speakerInfo">Lorem ipsum dolor sit amet consectetur, 
+            adipisicing elit. Officia est debitis id iure mollitia corporis
+            hic minima tempore deserunt magnam?
+          </div>
+        </div>
+      </li>
+
+      <li class="speakerCard">
+        <div class="speakerPicture">
+          <div class="pictureHolder">
+            <img 
+            class="picture"
+            src="/img/enologo2.jpg" 
+            alt="Picture of: Pinco Pallino2 - enologo2">
+          </div>  
+        </div>
+        <div class="speakerData">
+          <div class="speakerName">SohYeong Noh</div>
+          <div class="speakerRole">Sommelier</div>
+          <p class="separatorSmall"></p>
+          <div class="speakerInfo">Lorem ipsum dolor sit amet consectetur, 
+            adipisicing elit. Officia est debitis id iure mollitia corporis
+            hic minima tempore deserunt magnam?
+          </div>
+        </div>
+      </li>
+
     </ul>
-    <button class="expand upper">
+    <button type="button" class="expand upper">
       More
       <i class="material-icons">expand_more</i>
     </button>
@@ -192,8 +236,26 @@
  </main>
 
  <footer>
-<div class="sponsors"></div>
-<div class="copyrights"></div>
+  <div class="sponsors">
+    <h2>Partner</h2>
+    <p class="separatorMedium"></p>
+    <div class="partnersLogoContainer">
+      <img class="logoPartner1" alt="Partner logo">
+      <img class="logoPartner2" alt="Partner logo">
+      <img class="logoPartner3" alt="Partner logo">
+      <img class="logoPartner4" alt="Partner logo">
+      <img class="logoPartner5" alt="Partner logo">
+    </div>
+  </div>
+  <div class="copyrightsContainer">
+    <div class="logoPlaceholder">
+      <img src="/img/toso-logo.png" class="hostLogo" alt="Event Host logo">
+    </div>
+    <div class="copyrights">
+      <p>2021 Wine Tasting Association</p>
+      <p>This is a template web site. The information inside are invented.</p>
+    </div>
+  </div>
  </footer>
   <script src="js/menu.js"></script>
 </body>
