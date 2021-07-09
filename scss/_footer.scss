@@ -1,0 +1,102 @@
+footer {
+  position: relative;
+
+  @include wider-than($mainBp) {
+    top: $mainFromTop; //calculated TopBar + Navbar
+  }
+
+  .sponsors {
+    background-color: #424246;
+
+    @include px($lrSpacing-mobile);
+    @include py($xlarge);
+
+    @include wider-than($mainBp) {
+      @include px($lrSpacing-desktop);
+      @include py($big);
+    }
+
+    @extend .flex;
+
+    flex-direction: column;
+
+    @extend .flex-ai-c;
+
+    h2 {
+      font-size: $medium;
+      color: $lightGrey;
+    }
+
+    .partnersLogoContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: $xbig;
+
+      > img {
+        height: $big;
+        filter: sepia(100%);
+      }
+
+      .logoPartner1 {
+        content: url($logoPartner1);
+      }
+
+      .logoPartner2 {
+        content: url($logoPartner2);
+      }
+
+      .logoPartner3 {
+        content: url($logoPartner3);
+      }
+
+      .logoPartner4 {
+        content: url($logoPartner4);
+      }
+
+      .logoPartner5 {
+        content: url($logoPartner5);
+      }
+    }
+  }
+
+  .copyrightsContainer {
+    background-color: $almostWhite;
+
+    @include px($lrSpacing-mobile);
+    @include py($large);
+
+    display: flex;
+    justify-content: space-around;
+    gap: $xbig;
+
+    @include wider-than($mainBp) {
+      @include px($lrSpacing-desktop);
+      @include py(4.125rem);
+
+      justify-content: flex-start;
+    }
+
+    .logoPlaceholder {
+      position: relative;
+      height: $logoImgH; //40p
+
+      .hostLogo {
+        height: 100%;
+        content: url($hostLogo);
+
+        @include my($navBarSpacingTb); //12px
+      }
+    }
+
+    .copyrights {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: $small;
+      font-size: $small;
+      color: $darkGrey;
+    }
+  }
+}
