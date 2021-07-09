@@ -1,5 +1,5 @@
-.header { 
-  position: fixed; 
+.header {
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -8,14 +8,19 @@
 
   .topBar {
     display: none;
-    @include wider-than($mainBp){
+
+    @include wider-than($mainBp) {
       display: flex;
     }
+
     background-color: $darkGrey;
     color: $white;
+
     @include px($lrSpacing-desktop);
     @include py($topBarSpacingTb);
+
     @extend .flex-jc-end;
+
     gap: 1.25rem;
     font-size: $small; //12px
 
@@ -27,41 +32,48 @@
 
   nav {
     display: none;
-    @include wider-than($mainBp){
+
+    @include wider-than($mainBp) {
       display: flex;
     }
+
     @include px($lrSpacing-desktop);
+
     box-shadow: 0 0.25rem 32px 8px rgba(0, 0, 0, 0.3);
 
     .logoPlace {
       position: relative;
       height: $logoImgH; //40px
+
       @include my($navBarSpacingTb); //12px
       .eventLogo {
         content: url($eventLogo);
-        height: 100%;       
-      }    
-
+        height: 100%;
+      }
     }
-    
-    .navlinks{
+
+    .navlinks {
       > a {
-        &:not(:first-child){
+        &:not(:first-child) {
           margin-left: 3.25rem;
         }
-        color: $lightGrey; 
+
+        color: $lightGrey;
+
         &:hover {
           color: $orange;
-        }   
+        }
       }
     }
   }
 
   .menuBtn {
-    @include wider-than($mainBp){
+    @include wider-than($mainBp) {
       display: none;
     }
+
     @include button (0, 0,  $big, inherit, transparent, 0, unset, 0.25rem);
+
     position: absolute;
 
     i {
@@ -72,31 +84,35 @@
 
   .openMenuBtn {
     @extend .menuBtn;
+
     top: $menuTopLeftSpace;
     left: $menuTopLeftSpace;
   }
 
   .closeMenuBtn {
     @extend .menuBtn;
+
     top: $menuTopLeftSpace;
     right: $menuTopLeftSpace;
   }
 
-  .mobile-menu {    
+  .mobile-menu {
     position: absolute;
     top: 0;
     height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
+
     @extend .flex-jc-c;
     @extend .flex-ai-c;
+
     gap: 1rem;
     background-color: $wineColor;
     color: $lightGrey;
     font-size: $large;
 
-    &-closed {      
+    &-closed {
       left: -105vw;
     }
 

@@ -14,17 +14,20 @@ body {
   padding: 0;
 }
 
-*::before, *::after {
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
 }
 
 * ul li {
-list-style: none;
+  list-style: none;
 }
 
-* a, a:visited, a:hover {
+* a,
+a:visited,
+a:hover {
   text-decoration: none;
   color: inherit;
 }
@@ -35,22 +38,22 @@ list-style: none;
 }
 
 .desktop-invisible {
-  @include wider-than($mainBp){
+  @include wider-than($mainBp) {
     display: none;
   }
 }
 
 .mobile-invisible {
-  @include wide-less-than($mainBpLess){
+  @include wide-less-than($mainBpLess) {
     display: none;
   }
 }
-
 
 .separator {
   background-color: $orange;
   width: 3rem;
   height: 0.125rem;
+
   @include my($regular);
 }
 
@@ -58,16 +61,17 @@ list-style: none;
   background-color: $orange;
   width: $xlarge;
   height: 0.125rem;
+
   @include my($regular);
 }
 
 .separatorSmall {
-background-color: $lightGrey;
-width: $medium;
-height: 0.125rem;
-@include my($small);
-}
+  background-color: $lightGrey;
+  width: $medium;
+  height: 0.125rem;
 
+  @include my($small);
+}
 
 //Flexbox helper classes
 .flex {
@@ -77,10 +81,6 @@ height: 0.125rem;
     justify-content: center;
   }
 
-  // &-jc-start {
-  //   justify-content: flex-start;
-  // }
-
   &-jc-end {
     justify-content: flex-end;
   }
@@ -89,28 +89,7 @@ height: 0.125rem;
     justify-content: space-between;
   }
 
-  // &-jc-spa {
-  //   justify-content: space-around;
-  // }
-
   &-ai-c {
     align-items: center;
   }
-
-  // &-ai-start {
-  //   align-items: flex-start;
-  // }
-
-  // &-ai-end {
-  //   align-items: flex-end;
-  // }
-
-  // &-ai-spb {
-  //   align-items: space-between;
-  // }
-
-  // &-ai-spa {
-  //   align-items: space-around;
-  // }
 }
-

@@ -15,7 +15,8 @@ body {
   padding: 0;
 }
 
-*::before, *::after {
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: inherit;
@@ -26,7 +27,9 @@ body {
   list-style: none;
 }
 
-* a, a:visited, a:hover {
+* a,
+a:visited,
+a:hover {
   text-decoration: none;
   color: inherit;
 }
@@ -288,15 +291,14 @@ body {
   background-position: bottom center;
   background-size: contain;
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
   font-size: 2.75rem;
-  font-family: 'COCOGOOSE-LETTERPRESS';
+  font-family: 'COCOGOOSE-LETTERPRESS', Arial, sans-serif;
 }
 
 .main__info h1 span {
-  font-family: 'COCOGOOSE';
+  font-family: 'COCOGOOSE', Arial, sans-serif;
 }
 
 @media (min-width: 48rem) {
@@ -329,7 +331,7 @@ body {
 
 .main__info .date {
   font-size: 2.25rem;
-  font-family: 'COCOGOOSE';
+  font-family: 'COCOGOOSE', Arial, sans-serif;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
@@ -620,7 +622,7 @@ body {
   }
 }
 
-.main__speakers .expand i {
+.main__speakers .expand i.material-icons {
   color: #ec5242;
   font-weight: bold;
 }
