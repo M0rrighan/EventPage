@@ -32,7 +32,7 @@ const speakers = [
 ];
 
 function createSpeakerCard(speakerDataObj) {
-  const htmlTxt = `<li class="speakerCard">
+  const htmlTxt = `<li class="speakerCard mobile-invisible">
                     <div class="speakerPicture">
                       <div class="pictureHolder">
                         <img 
@@ -45,8 +45,7 @@ function createSpeakerCard(speakerDataObj) {
                       <div class="speakerName">${speakerDataObj.name}</div>
                       <div class="speakerRole">${speakerDataObj.role}</div>
                       <p class="separatorSmall"></p>
-                      <div class="speakerInfo">${speakerDataObj.info}
-                      </div>
+                      <div class="speakerInfo">${speakerDataObj.info}</div>
                     </div>
                   </li>`;
   return htmlTxt;
@@ -54,9 +53,21 @@ function createSpeakerCard(speakerDataObj) {
 
 const parentElmnt = document.querySelector('.speakersContent');
 
-function populate() {
+function populate0() {
   for (let i = 0; i < speakers.length; i += 1) {
     parentElmnt.innerHTML += createSpeakerCard(speakers[i]);
   }
 }
-parentElmnt.onload = populate();
+parentElmnt.onload = populate0();
+
+// function populate(x) {
+//   if (x.matches) { // If media query matches
+//     document.body.style.backgroundColor = 'yellow';
+//   } else {
+//     document.body.style.backgroundColor = 'pink';
+//   }
+// }
+
+// const x = window.matchMedia('(min-width: 768px)');
+// myFunction(x); // Call listener function at run time
+// x.addListener(myFunction); // Attach listener function on state changes
