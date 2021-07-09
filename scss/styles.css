@@ -227,7 +227,7 @@ a:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1rem;
-  background-color: #790000;
+  background-color: #b82025;
   color: #bababa;
   font-size: 2rem;
 }
@@ -795,7 +795,7 @@ a:hover {
 #about .main .pastEventBtn {
   width: 100%;
   color: #fff;
-  background-color: #790000;
+  background-color: #b82025;
   border: none;
   border-radius: 0;
   cursor: pointer;
