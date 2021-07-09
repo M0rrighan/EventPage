@@ -126,3 +126,17 @@
     }
   }
 }
+
+#about .header {
+  @extend .header;
+
+  .topBar {
+    padding-left: 16.8%;
+    padding-right: 4.5%;
+  }
+
+  nav {
+    padding-left: $lSpace-desk-About;
+    padding-right: $rSpace-desk-About;
+  }
+}
