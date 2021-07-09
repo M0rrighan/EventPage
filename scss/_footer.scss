@@ -1,4 +1,4 @@
-footer {
+.footer {
   position: relative;
 
   @include wider-than($mainBp) {
@@ -97,6 +97,24 @@ footer {
       gap: $small;
       font-size: $small;
       color: $darkGrey;
+    }
+  }
+}
+
+#about .footer {
+  @extend .footer;
+
+  @include wider-than($mainBp) {
+    .sponsors {
+      display: none;
+    }
+
+    .copyrightsContainer {      
+      background-color: $darkGrey;
+
+      .copyrights {
+        color: $almostWhite;
+      }
     }
   }
 }

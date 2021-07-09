@@ -74,7 +74,7 @@ a:hover {
   margin-bottom: 0.75rem;
 }
 
-.flex, .main__program, .main__program .programContent, .main__speakers, .main__speakers .speakersContent, .main__speakers .speakersContent .speakerCard .speakerPicture, .main__speakers .expand, footer .sponsors {
+.flex, .main__program, .main__program .programContent, .main__speakers, .main__speakers .speakersContent, .main__speakers .speakersContent .speakerCard .speakerPicture, .main__speakers .expand, .footer .sponsors, #about .footer .sponsors {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -98,7 +98,7 @@ a:hover {
           justify-content: space-between;
 }
 
-.flex-ai-c, .header .mobile-menu, #about .header .mobile-menu, .main__program, .main__speakers, .main__speakers .expand, footer .sponsors {
+.flex-ai-c, .header .mobile-menu, #about .header .mobile-menu, .main__program, .main__speakers, .main__speakers .expand, .footer .sponsors, #about .footer .sponsors {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -637,17 +637,17 @@ a:hover {
   font-weight: bold;
 }
 
-footer {
+.footer, #about .footer {
   position: relative;
 }
 
 @media (min-width: 48rem) {
-  footer {
+  .footer, #about .footer {
     top: 5.725rem;
   }
 }
 
-footer .sponsors {
+.footer .sponsors, #about .footer .sponsors {
   background-color: #424246;
   padding-left: 2.5%;
   padding-right: 2.5%;
@@ -660,7 +660,7 @@ footer .sponsors {
 }
 
 @media (min-width: 48rem) {
-  footer .sponsors {
+  .footer .sponsors, #about .footer .sponsors {
     padding-left: 14%;
     padding-right: 14%;
     padding-top: 2.75rem;
@@ -668,12 +668,12 @@ footer .sponsors {
   }
 }
 
-footer .sponsors h2 {
+.footer .sponsors h2, #about .footer .sponsors h2 {
   font-size: 1.375rem;
   color: #bababa;
 }
 
-footer .sponsors .partnersLogoContainer {
+.footer .sponsors .partnersLogoContainer, #about .footer .sponsors .partnersLogoContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -688,33 +688,33 @@ footer .sponsors .partnersLogoContainer {
   gap: 3rem;
 }
 
-footer .sponsors .partnersLogoContainer > img {
+.footer .sponsors .partnersLogoContainer > img, #about .footer .sponsors .partnersLogoContainer > img {
   height: 2.75rem;
   -webkit-filter: sepia(100%);
           filter: sepia(100%);
 }
 
-footer .sponsors .partnersLogoContainer .logoPartner1 {
+.footer .sponsors .partnersLogoContainer .logoPartner1, #about .footer .sponsors .partnersLogoContainer .logoPartner1 {
   content: url("../img/partner1.png");
 }
 
-footer .sponsors .partnersLogoContainer .logoPartner2 {
+.footer .sponsors .partnersLogoContainer .logoPartner2, #about .footer .sponsors .partnersLogoContainer .logoPartner2 {
   content: url("../img/partner2.png");
 }
 
-footer .sponsors .partnersLogoContainer .logoPartner3 {
+.footer .sponsors .partnersLogoContainer .logoPartner3, #about .footer .sponsors .partnersLogoContainer .logoPartner3 {
   content: url("../img/partner3.png");
 }
 
-footer .sponsors .partnersLogoContainer .logoPartner4 {
+.footer .sponsors .partnersLogoContainer .logoPartner4, #about .footer .sponsors .partnersLogoContainer .logoPartner4 {
   content: url("../img/partner4.jpg");
 }
 
-footer .sponsors .partnersLogoContainer .logoPartner5 {
+.footer .sponsors .partnersLogoContainer .logoPartner5, #about .footer .sponsors .partnersLogoContainer .logoPartner5 {
   content: url("../img/partner5.png");
 }
 
-footer .copyrightsContainer {
+.footer .copyrightsContainer, #about .footer .copyrightsContainer {
   background-color: #f5f5f5;
   padding-left: 2.5%;
   padding-right: 2.5%;
@@ -729,7 +729,7 @@ footer .copyrightsContainer {
 }
 
 @media (min-width: 48rem) {
-  footer .copyrightsContainer {
+  .footer .copyrightsContainer, #about .footer .copyrightsContainer {
     padding-left: 14%;
     padding-right: 14%;
     padding-top: 4.125rem;
@@ -740,19 +740,19 @@ footer .copyrightsContainer {
   }
 }
 
-footer .copyrightsContainer .logoPlaceholder {
+.footer .copyrightsContainer .logoPlaceholder, #about .footer .copyrightsContainer .logoPlaceholder {
   position: relative;
   height: 2.5rem;
 }
 
-footer .copyrightsContainer .logoPlaceholder .hostLogo {
+.footer .copyrightsContainer .logoPlaceholder .hostLogo, #about .footer .copyrightsContainer .logoPlaceholder .hostLogo {
   height: 100%;
   content: url("../img/toso-logo.png");
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
 }
 
-footer .copyrightsContainer .copyrights {
+.footer .copyrightsContainer .copyrights, #about .footer .copyrightsContainer .copyrights {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -766,6 +766,18 @@ footer .copyrightsContainer .copyrights {
   gap: 0.75rem;
   font-size: 0.75rem;
   color: #3e3e3e;
+}
+
+@media (min-width: 48rem) {
+  #about .footer .sponsors {
+    display: none;
+  }
+  #about .footer .copyrightsContainer {
+    background-color: #3e3e3e;
+  }
+  #about .footer .copyrightsContainer .copyrights {
+    color: #f5f5f5;
+  }
 }
 
 @font-face {
