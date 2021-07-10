@@ -1,0 +1,55 @@
+@use "sass:math";
+
+// Colors
+$darkGrey: #071d3d;
+$lightGrey: #69bbd4;
+$orange: #3523d4;
+$almostWhite: #ffdced;
+$white: rgb(253, 217, 255);
+$wineColor: #b82025;
+
+// Font Sizes
+$small: 1rem; //12px used for: TopBar_links,  MainInfo_date_py, MainInfo_description_mt@Dsk
+$regular: 1.35rem; //16px --used for: MainInfo_description, MainInfo_location, separator_my,
+$medium: 1.8rem; //22px --used for: MainInfo_description_mt@mob,
+//description_px_py@Dsk, MainProgram_pb, programContent_my,
+$large: 2.75rem; //32px --used for: MainInfo_h2_@mob, MainProgram_h2,
+$xlarge: 3rem; //36px --used for: MainInfo_h2_@Dsk, MainInfo_date,
+$big: 3.5rem; //44px --used for: Open_Close_MenuBtnIcon, MainInfo_h1_@mob,
+$xbig: 4rem; //48px --used for: MainInfo_h1_@Dsk, MainProgram_h2_mt,
+
+// Sizes & Spacing
+$socialIconH: 1rem; //16px
+$logoImgH: 2.5rem; //40px
+$topBarSpacingTb: 0.3625rem; //5.8px
+$navBarSpacingTb: 0.75rem; //12px
+$menuTopLeftSpace: 1.625rem; //26px
+// main page padding:
+$lrSpacing-desktop: 21%;
+$lrSpacing-mobile: 5%;
+$lSpace-desk-About: 20%;
+$rSpace-desk-About: 20%;
+$lrSpacing-mobile-about: 7%;
+// Desktop mainSection distance from top:
+// TopBar (2 * 0.3625rem top and bottom padding, 1 rem socials height)
+// NavBar (2 * 0.75rem top and bottom margin, 2.5 rem logo height)
+$mainFromTop: ($socialIconH + $logoImgH + (2 * $topBarSpacingTb) + (2 * $navBarSpacingTb));
+
+// Breakpoints
+$mainBp: 48rem; //768px
+$mainBpLess: 47.9375rem; //767px
+
+// Url for background image at top of main section
+$mainBgImgUrl: "../img/degustazioneInVigna.png";
+$textBgImgUrl: "../img/cena_in_vigna1.jpg";
+$programBgImgUrl: "../img/q.png";
+$bigoreSpeakerPicture: "../img/quadrati.jpg";
+$eventLogo: "../img/eventLogo.png";
+$hostLogo: "../img/logo-toso.png";
+$logoPartner1: "../img/partner1.png";
+$logoPartner2: "../img/partner2.png";
+$logoPartner3: "../img/partner3.png";
+$logoPartner4: "../img/partner4.jpg";
+$logoPartner5: "../img/partner5.png";
+$pastEvent1: "../img/cena_in_vigna1.jpg";
+$pastEvent2: "../img/cena_in_vigna2.jpg";

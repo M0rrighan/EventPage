@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./scss/styles.css">
+  <title>Wine Tasting</title>
+</head>
+<body>
+ <header class="header">
+
+   <!-- top bar: hidden for mobile -->
+   <div class="topBar flex">
+     <a href="#">
+       <img class="socials" src="img/facebook.svg" alt="facebook logo icon"/>
+     </a>
+     <a href="#">
+      <img class="socials" src="img/twitter.svg" alt="twitter logo icon"/>
+    </a>
+     <a href="#">English</a>
+     <a href="#">My Page</a>
+     <a href="#">Logout</a>
+   </div>
+
+   <!-- nav bar: hidden for mobile -->
+   <nav class="flex flex-jc-spb flex-ai-c">
+     <div class="logoPlace">
+       <a href="index.html">
+        <img src="img/eventLogo.png" class="eventLogo" 
+            alt="Red wine glass as logo for Wine Tasting Association">
+        </a>
+    </div>
+     
+     <div class="navlinks flex">
+       <a href="index.html">Home</a>
+       <a href="about.html">About</a>
+     </div>
+   </nav>
+
+   <a class="openMenuBtn">
+     <i class="material-icons">menu</i>
+   </a> 
+  
+  <!-- mobile menu, hidden for desktop -->
+  <div class="mobile-menu mobile-menu-closed">
+    <button type="button" class="closeMenuBtn">
+      <i class="material-icons">close</i>
+    </button>
+  </div>  
+ </header>
+
+ <main class="main">
+  <section class="main__info">
+    <h2 class="greetings">"Hello! Wine lovers"</h2>
+    <h1 class="upper">wine tasting <br> in the vineyard <br> <span>2021</span></h1>
+    <div class="descriptionWrapper">
+      <div class="description">A different way to approach wine and to discover lands,
+        scents and stories of winemakers. An excellent opportunity to taste local 
+        delicacies selected to match the various wines.
+     </div>
+    </div>    
+    <div class="date">
+      2021.09.15 (Wed)
+    </div>
+    <div class="location">
+      @ Cantine Toso, Cossano Belbo - Piedmont
+    </div>  
+  </section>
+
+  <section class="main__program">
+    <h2 class="sectionTitle">Main Program</h2>
+    <p class="separator"></p>
+    <ul class="programContent">
+      <li class="programItemCard">
+        <div class="programCardIcon">
+          <i class="material-icons">
+            brunch_dining
+          </i>
+        </div>
+        <div class="programCardTitle">
+            Welcoming
+        </div>
+        <div class="programCardDescription">
+          Welcoming drinks open bar: selected fizzy Aperi - wines accompanied
+          by a wide selection of locally produced gourmet appetizers
+        </div>
+      </li>
+
+      <li class="programItemCard">
+        <div class="programCardIcon">
+          <i class="material-icons">record_voice_over</i>
+        </div>
+        <div class="programCardTitle">
+          Lecture
+        </div>
+        <div class="programCardDescription">
+          Esteemed oenologists explaining the various properties of wine, guiding 
+          in the choice of the right wine glass and food to match and a lot more...
+        </div>
+      </li>
+
+      <li class="programItemCard">
+        <div class="programCardIcon">
+          <i class="material-icons">dinner_dining</i>
+        </div>
+        <div class="programCardTitle">
+          Dinner
+        </div>
+        <div class="programCardDescription">
+          Seasonal delicacies produced locally: - entree' of cured meats and cheeses,
+          - first course (pasta), and - main course of choice.
+        </div>
+      </li>
+
+      <li class="programItemCard">
+        <div class="programCardIcon">
+          <i class="material-icons">music_note</i>
+        </div>
+        <div class="programCardTitle">
+          Live Music
+        </div>
+        <div class="programCardDescription">
+          Live band entertaining with soft jazz. A perfect match to make your experience 
+          even more sensational.
+        </div>
+      </li>
+
+      <li class="programItemCard">
+        <div class="programCardIcon">
+          <i class="material-icons">cake</i>
+        </div>
+        <div class="programCardTitle">
+          Dessert
+        </div>
+        <div class="programCardDescription">
+          To end the evening on a sweet note: Tastes of delicious light 
+          pastries along with carefully selected dessert wines.
+        </div>
+      </li>
+    </ul>
+    <button type="button" class="contact desktop-invisible">
+      Book your spot
+    </button>
+    <a href="#" class="upper mobile-invisible">See the whole program</a>
+  </section>
+  <section class="main__speakers">
+    <h2>Experts</h2>
+    <p class="separator"></p>
+    <ul class="speakersContent">
+    </ul>
+    <button type="button" class="expand upper">
+      More
+      <i class="material-icons">expand_more</i>
+    </button>
+  </section>
+ </main>
+
+ <footer class="footer mobile-invisible">
+  <div class="sponsors">
+    <h2>Partner</h2>
+    <p class="separatorMedium"></p>
+    <div class="partnersLogoContainer">
+      <img src="." class="logoPartner1" alt="Partner logo">
+      <img src="." class="logoPartner2" alt="Partner logo">
+      <img src="." class="logoPartner3" alt="Partner logo">
+      <img src="." class="logoPartner4" alt="Partner logo">
+      <img src="." class="logoPartner5" alt="Partner logo">
+    </div>
+  </div>
+  <div class="copyrightsContainer">
+    <div class="logoPlaceholder">
+      <img src="img/logo-toso.png" class="hostLogo" alt="Event Host logo">
+    </div>
+    <div class="copyrights">
+      <p>2021 Wine Tasting Association</p>
+      <p>This is a template web site. The information inside are invented.</p>
+    </div>
+  </div>
+ </footer>
+  <script src="js/menu.js"></script>
+  <script src="js/program2.js"></script>
+</body>
+</html>
