@@ -23,6 +23,18 @@ const speakers = [
     info: 'He has created a very special wine list, which leads guests to discover bottles that are not at all obvious, coming from both Italy and the rest of the world..',
     pictureUrl: './img/enologo4.jpg',
   },
+  {
+    name: 'Boem Amavino',
+    role: 'experienced oenologists',
+    info: 'He is an expert who loves a contemporary style of wine based on elegance, the containment of alcohol and the use of wood.',
+    pictureUrl: './img/enologo5.jpg',
+  },
+  {
+    name: 'Zio Paperino',
+    role: 'sommelier',
+    info: 'He has created a very special wine list, which leads guests to discover bottles that are not at all obvious, coming from both Italy and the rest of the world..',
+    pictureUrl: './img/enologo6.jpg',
+  },
 ];
 
 function createSpeakerCard(speakerDataObj) {
