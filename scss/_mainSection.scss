@@ -13,6 +13,7 @@
 
   &__info {
     z-index: 15;
+
     @include py(8.375rem);
     @include px($lrSpacing-mobile);
 
@@ -26,7 +27,7 @@
 
       @include wider-than($mainBp) {
         font-size: $xlarge;
-      }      
+      }
     }
 
     h1 {
@@ -46,7 +47,7 @@
       @include wider-than($mainBp) {
         font-size: $xbig;
       }
-      
+
       &::before {
         content: '';
         background-image: url(../img/wine_set.png);
@@ -66,29 +67,29 @@
       }
     }
 
-    .descriptionWrapper{
+    .descriptionWrapper {
       position: relative;
       z-index: 1;
 
-    .description {
-      background-color: $almostWhite;
-      z-index: 1;
-      font-size: $regular;
-      line-height: 1.5rem;
-      border: 3px solid $white;
-      margin-top: $medium;
+      .description {
+        background-color: $almostWhite;
+        z-index: 1;
+        font-size: $regular;
+        line-height: 1.5rem;
+        border: 3px solid $white;
+        margin-top: $medium;
 
-      @include px (1.5rem);
-      @include py (1.5rem);
+        @include px (1.5rem);
+        @include py (1.5rem);
 
-      @include wider-than($mainBp) {
-        max-width: 65%;
-        margin-top: $small;
+        @include wider-than($mainBp) {
+          max-width: 65%;
+          margin-top: $small;
 
-        @include px ($medium);
-        @include py ($medium);
+          @include px ($medium);
+          @include py ($medium);
+        }
       }
-    }
 
       &::before {
         content: '';
@@ -110,7 +111,7 @@
           right: -45%;
         }
       }
-      
+
       &::after {
         content: '';
         background-image: url(../img/bottle_glass1.png);
@@ -131,7 +132,7 @@
           right: -75%;
         }
       }
-      
+
       &:hover::before {
         opacity: 100%;
       }
@@ -429,7 +430,7 @@
     &::before {
       content: '';
       background-image: url(../img/wine_set.png);
-      transform:scaleX(-1);
+      transform: scaleX(-1);
       top: 55px;
       left: 0;
     }
@@ -446,7 +447,7 @@
   .descriptionWrapper {
     position: relative;
     z-index: 1;
-    
+
     .description {
       background-color: $white;
       border: 3px solid #ececec;
@@ -462,10 +463,11 @@
         @include px (3.25rem);
       }
     }
+
     &::before {
       content: '';
       background-image: url(../img/decanter_hor.png);
-      transform:scaleX(-1);
+      transform: scaleX(-1);
       top: -75%;
       right: 50%;
 
@@ -483,8 +485,8 @@
         top: 50%;
       }
     }
-
   }
+
   .location {
     margin-top: 1.75rem;
     margin-bottom: 2.375rem;
