@@ -47,7 +47,7 @@
 
       @include my($navBarSpacingTb); //12px
       .eventLogo {
-        content: url($eventLogo);
+        // content: url($eventLogo);
         height: 100%;
       }
     }

@@ -83,8 +83,8 @@
       height: $logoImgH; //40p
 
       .hostLogo {
+        // content: url($hostLogo);
         height: 100%;
-        content: url($hostLogo);
 
         @include my($navBarSpacingTb); //12px
       }
